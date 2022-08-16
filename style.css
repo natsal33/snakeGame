@@ -1,0 +1,14 @@
+* {
+  text-align: center;
+  background-color: rgb(230, 214, 214);
+}
+
+h1 {
+  color: rgb(253, 56, 155);
+  text-shadow: -1px -1px 0 pink, 1px -1px 0 pink, -1px 1px 0 pink,
+    1px 1px 0 pink;
+}
+
+#instructions {
+  color: rgb(253, 56, 155);
+}

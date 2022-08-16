@@ -62,7 +62,7 @@ class SnakeLinkedList {
 window.onload = function () {
   canvas = document.getElementById("gameCanvas");
   canvasContext = canvas.getContext("2d");
-  var framesPerSecond = 10;
+  var framesPerSecond = 6;
 
   //initialize SnakeList
   let headLink = new SnakeNode(0, 10);
@@ -190,8 +190,8 @@ function checkSnakePosition() {
   if (
     snakeBody.head.x < 0 ||
     snakeBody.head.y < 0 ||
-    snakeBody.head.x > canvas.width - SNAKE_WIDTH ||
-    snakeBody.head.y > canvas.height - SNAKE_WIDTH
+    snakeBody.head.x + SNAKE_WIDTH > canvas.width ||
+    snakeBody.head.y + SNAKE_WIDTH > canvas.height
   ) {
     reset();
     return;
@@ -253,9 +253,8 @@ function collision(x1, y1, size1, x2, y2, size2) {
   var result = false;
 
   if (
-    ((x1Min >= x2Min && x1Min <= x2Max) ||
-      (x1Max >= x2Min && x1Max <= x2Max)) &&
-    ((y1Min >= y2Min && y1Min <= y2Max) || (y1Max >= y2Min && y1Max <= y2Max))
+    ((x1Min > x2Min && x1Min < x2Max) || (x1Max > x2Min && x1Max < x2Max)) &&
+    ((y1Min > y2Min && y1Min < y2Max) || (y1Max > y2Min && y1Max < y2Max))
   ) {
     result = true;
   }
