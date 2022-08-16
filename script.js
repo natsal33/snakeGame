@@ -76,7 +76,6 @@ window.onload = function () {
       }
       checkSnakePosition();
       moveSnake();
-      console.log(snakeBody);
     }, 1000 / framesPerSecond);
   } else {
     console.log("canvas unsupported");
@@ -86,7 +85,6 @@ window.onload = function () {
 };
 
 function keyPressed(evt) {
-  // console.log("keypressed");
   if (showGameOverScreen) {
     showGameOverScreen = false;
     score = 0;
