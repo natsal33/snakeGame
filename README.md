@@ -17,6 +17,7 @@ Snake Game! Is a virtual game where the goal is to eat as many apples and grow y
 
 The game ends when you collide with a wall or the snake accidentally "eats" itself. Score resets after each round, what will your high score be?
 
+Through developing this game I learned how to modulate similar functions in code to make it more readable and easier to edit in the future. Learning how to utilize a gameboard was a fun challenge that really played into the logic behind code that I enjoy so much.
 <br>
 
 Author
